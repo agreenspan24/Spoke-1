@@ -59,6 +59,7 @@
   },
   "homepage": "https://github.com/MoveOnOrg/Spoke/#readme",
   "dependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/polyfill": "^7.8.3",
     "@babel/runtime": "^7.8.4",
     "@sentry/node": "5.12.4",
@@ -120,7 +121,6 @@
     "yup": "^0.24.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-export-default-from": "^7.8.3",
