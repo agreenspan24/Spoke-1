@@ -28,7 +28,7 @@ function getBundleFileName() {
   //   )
   // );
 
-  return "https://ag-ew-spoke-codems-8120-textforcampaign.s3.us-east-2.amazonaws.com/spoke/bundle.js";
+  return "/assets/bundle.js";
 }
 
 export async function updateBundleFileName() {
@@ -127,7 +127,7 @@ export default async function renderIndex(req) {
       }
       window.STAGE="${process.env.STAGE || "local"}"
     </script>
-    <script src="${await getBundleURL()}" crossorigin="anonymous"></script>
+    <script src="${await getBundleURL()}"></script>
   </body>
 </html>
 `;
