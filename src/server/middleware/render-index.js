@@ -11,22 +11,22 @@ const externalLinks = process.env.NO_EXTERNAL_LINKS
   : '<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins">';
 
 function getBundleFileName() {
-  const assetMapData = JSON.parse(
-    fs.readFileSync(
-      // this is a bit overly complicated for the use case
-      // of it being run from the build directory BY claudia.js
-      // we need to make it REALLY relative, but not by the
-      // starting process or the 'local' directory (which are both wrong then)
-      (process.env.ASSETS_DIR || "").startsWith(".")
-        ? path.join(
-            __dirname,
-            "../../../../",
-            process.env.ASSETS_DIR,
-            process.env.ASSETS_MAP_FILE
-          )
-        : path.join(process.env.ASSETS_DIR, process.env.ASSETS_MAP_FILE)
-    )
-  );
+  // const assetMapData = JSON.parse(
+  //   fs.readFileSync(
+  //     // this is a bit overly complicated for the use case
+  //     // of it being run from the build directory BY claudia.js
+  //     // we need to make it REALLY relative, but not by the
+  //     // starting process or the 'local' directory (which are both wrong then)
+  //     (process.env.ASSETS_DIR || "").startsWith(".")
+  //       ? path.join(
+  //           __dirname,
+  //           "../../../../",
+  //           process.env.ASSETS_DIR,
+  //           process.env.ASSETS_MAP_FILE
+  //         )
+  //       : path.join(process.env.ASSETS_DIR, process.env.ASSETS_MAP_FILE)
+  //   )
+  // );
 
   return "https:/ag-ew-spoke-codems-8120-textforcampaign.s3.us-east-2.amazonaws.com/spoke/bundle.js";
 }
