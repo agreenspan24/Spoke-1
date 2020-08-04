@@ -28,7 +28,7 @@ function getBundleFileName() {
   //   )
   // );
 
-  return "https:/ag-ew-spoke-codems-8120-textforcampaign.s3.us-east-2.amazonaws.com/spoke/bundle.js";
+  return "https://ag-ew-spoke-codems-8120-textforcampaign.s3.us-east-2.amazonaws.com/spoke/bundle.js";
 }
 
 export async function updateBundleFileName() {
